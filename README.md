@@ -41,7 +41,9 @@ import Vue from 'vue'
 import { Login } from 'tms-login-ui'
 Vue.use(Login)
 ```
-
+```
+<tms-login mode="static" :display="{nickname:true,password:true}" @submit="callback"></tms-login>
+```
 ### 插槽（slots）
 
 | 名称   | 说明                                        |
