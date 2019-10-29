@@ -22,8 +22,7 @@ export default function(Vue) {
         },
         methods: {
             submit() {
-                let userObj = JSON.stringify({name: this.user.nickname, pwd: this.user.password})
-                alert(userObj)
+                this.$emit('submit', this.user)
             },
             computedPosition(num) {
                 return parseInt(num / 2)
@@ -43,6 +42,7 @@ export default function(Vue) {
                         "background-color": "#f5f5f5",
                         "margin-left": "-" + modalPositionLeft,
                         "margin-top": "-" + modalPositionTop,
+                        "padding": "10px"
                     }
                     return styles
 
